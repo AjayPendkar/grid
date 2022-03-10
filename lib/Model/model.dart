@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-class Google extends ChangeNotifier {
+
+
+class Google {
   List<Results> results;
   List<Null> imageResults;
   int total;
@@ -24,7 +25,7 @@ class Google extends ChangeNotifier {
         results.add(new Results.fromJson(v));
       });
     }
-    
+
     total = json['total'];
     answers = json['answers'].cast<String>();
     ts = json['ts'];
@@ -43,9 +44,7 @@ class Google extends ChangeNotifier {
     data['device_region'] = this.deviceRegion;
     data['device_type'] = this.deviceType;
     return data;
-    
   }
-notifyListeners();
 }
 
 class Results {
@@ -126,7 +125,5 @@ class Cite {
     data['domain'] = this.domain;
     data['span'] = this.span;
     return data;
-    
   }
-  
 }

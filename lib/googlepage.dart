@@ -67,7 +67,7 @@ class _GooglePageState extends State<GooglePage> {
               setState(() {});
             }
           },
-          child: Text("sample button"),
+          child: Text("SEARCH"),
         ),
         if (google != null)
           Expanded(

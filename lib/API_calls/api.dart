@@ -19,19 +19,13 @@ class ApiCalls with ChangeNotifier {
         });
 
     if (response.statusCode == 200) {
-      // print(response.body);
       Google google = Google.fromJson(json.decode(response.body));
-      // Iterable l = json.decode(response.body);
       google.results.forEach((e) {
         print("Ajay" + e.title.toString());
       });
 
       return google;
-
-      // If the call to the server was successful, parse the JSON
-      //  Insta.fromJson(json.decode(response.body));
     } else {
-      // If that call was not successful, throw an error.
       throw Exception('Failed to load post');
     }
   }
